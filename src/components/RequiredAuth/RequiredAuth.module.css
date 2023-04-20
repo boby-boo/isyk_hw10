@@ -1,0 +1,40 @@
+.title {
+    margin: 20vh 0 90px;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: #ce1433;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 0 auto;
+}
+
+button {
+    width: 160px;
+    height: 60px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: inherit;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: opacity .3s ease;
+}
+
+.buttonGreen {
+    background-color: #24824b;
+}
+
+.buttonRed {
+    background-color: #ce1433;;
+}
+
+button:hover {
+    opacity: 0.8;
+}

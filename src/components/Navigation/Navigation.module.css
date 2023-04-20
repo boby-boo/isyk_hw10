@@ -1,0 +1,30 @@
+.navigation {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMenu {
+    display: flex;
+    gap: 60px;
+    text-transform: uppercase;
+}
+
+.headerMenu a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.headerMenu a {
+    font-size: 25px;
+    color: inherit;
+    font-weight: 600;
+    transition: color .3s ease;
+}
+
+.headerMenu a:hover {
+    color: #bd1d38e8;
+}
