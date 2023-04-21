@@ -1,10 +1,14 @@
-import React from 'react';
-import style from './Main.module.css';
+import React, { useState } from "react";
+import style from "./Main.module.css";
+import ErrorButton from "../ErrorButton/ErrorButton";
 
 const Main = () => {
     return (
-    <h1>Main page</h1>
-    )
-}
+    <div>
+        <h1>Main page</h1>
+        <ErrorButton />
+    </div>
+    );
+};
 
 export default Main;

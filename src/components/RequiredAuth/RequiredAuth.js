@@ -9,10 +9,10 @@ const RequiredAuth = ({children}) => {
             <div>
                 <h1 className={style.title}>You are <span>18 years</span> old?</h1>
                 <div className={style.buttons}>
-                    <button className={style.buttonGreen} onClick={() => setIsAuth(true)}>
+                    <button className={`${style.buttonGreen} ${style.requiredAuthBtn}`} onClick={() => setIsAuth(true)}>
                         Yes
                     </button>
-                    <button className={style.buttonRed} onClick={() => window.history.back()}>
+                    <button className={`${style.buttonRed} ${style.requiredAuthBtn}`} onClick={() => window.history.back()}>
                         No
                     </button>
                 </div>

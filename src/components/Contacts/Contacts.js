@@ -1,9 +1,13 @@
 import React from "react";
 import style from './Contacts.module.css';
+import ErrorButton from "../ErrorButton/ErrorButton";
 
 const Contacts = () => {
     return (
-    <h1>Contacts page</h1>
+        <div>
+            <h1>Contacts page</h1>
+            <ErrorButton />
+        </div>
     )
 }
 

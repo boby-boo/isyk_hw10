@@ -7,28 +7,44 @@ import Products from '../Products/Products';
 import ProductItem from '../ProductItem/ProductItem';
 import RequiredAuth from '../RequiredAuth/RequiredAuth';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <header className='header'>
-          <Navigation />
-        </header>
-      <div className="app">
-        <Routes>
-          <Route path='/main' element={<Main />}/>
-          <Route path='/contacts' element={<Contacts />} />
-          <Route path='/products' element={<Products />} /> 
-          <Route path='/products/:productId' element={<ProductItem />} />
-          <Route path='private' element={
-            <RequiredAuth>
-              <PrivateRoute/>
-            </RequiredAuth>
-          } />
-        </Routes>
-    </div>
-      </BrowserRouter>
+          <header className='header'>
+            <Navigation />
+          </header>
+
+          <div className="app">
+            <Routes>
+              <Route path='/main' element={
+                <ErrorBoundary>
+                  <Main />
+                </ErrorBoundary>
+              } />
+              <Route path='/contacts' element={
+                <ErrorBoundary>
+                  <Contacts />
+                </ErrorBoundary>
+              } />
+              <Route path='/products' element={
+                <ErrorBoundary>
+                  <Products />
+                </ErrorBoundary>
+              } /> 
+              <Route path='/products/:productId' element={<ProductItem />} />
+              <Route path='private' element={
+                <RequiredAuth>
+                  <ErrorBoundary>
+                    <PrivateRoute/>
+                  </ErrorBoundary>
+                </RequiredAuth>
+              } />
+            </Routes>
+          </div>
+        </BrowserRouter>
     </>
 
   );

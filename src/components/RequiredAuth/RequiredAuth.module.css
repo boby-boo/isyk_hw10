@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 
-button {
+.requiredAuthBtn {
     width: 160px;
     height: 60px;
     font-size: 30px;
@@ -35,6 +35,6 @@ button {
     background-color: #ce1433;;
 }
 
-button:hover {
+.requiredAuthBtn:hover {
     opacity: 0.8;
 }
