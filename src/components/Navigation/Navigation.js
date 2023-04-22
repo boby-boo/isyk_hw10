@@ -4,9 +4,9 @@ import Logo from '../Logo/Logo';
 import style from './Navigation.module.css';
 
 const Navigation = () => {
-    return(
+    return (
         <div className={style.navigation}>
-            <Link to='main'>
+            <Link to='/main'>
                 <Logo/>
             </Link>
             <nav>

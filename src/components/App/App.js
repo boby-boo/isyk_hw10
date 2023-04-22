@@ -8,7 +8,7 @@ import Products from '../Products/Products';
 import ProductItem from '../ProductItem/ProductItem';
 import RequiredAuth from '../RequiredAuth/RequiredAuth';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+
 
 const App = () => {
   return (
@@ -19,33 +19,13 @@ const App = () => {
         </header>
         <div className="app">
           <Routes>
-            <Route path='/main' element={
-                <ErrorBoundary>
-                  <Main />
-                </ErrorBoundary>
-            } />
-          </Routes>
-          <Routes>
-            <Route path='/products' element={
-                <ErrorBoundary>
-                  <Products />
-                </ErrorBoundary>
-            } />
+            <Route path='/main' element={<Main />} />
+            <Route path='/products' element={<Products />} />
             <Route path='/products/:productId' element={<ProductItem />} />
-          </Routes>
-          <Routes>
-            <Route path='/contacts' element={
-                <ErrorBoundary>
-                  <Contacts />
-                </ErrorBoundary>
-            } />
-          </Routes>
-          <Routes>
+            <Route path='/contacts' element={<Contacts />} />
             <Route path='private' element={
               <RequiredAuth>
-                <ErrorBoundary>
                   <PrivateRoute/>
-                </ErrorBoundary>
               </RequiredAuth>
             } />
           </Routes>

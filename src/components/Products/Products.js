@@ -4,6 +4,7 @@ import Preloader from '../Preloader/Preloader';
 
 import style from './Products.module.css';
 import ErrorButton from '../ErrorButton/ErrorButton';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -22,6 +23,7 @@ const Products = () => {
     };
 
     return (
+        <ErrorBoundary>
             <div className={style.productInner}>
                 <h1 className={style.title}>Products page</h1>
                 <ErrorButton />
@@ -43,7 +45,7 @@ const Products = () => {
                         })}
                     </ul>
             </div>
-
+        </ErrorBoundary>
     )
 }
 
