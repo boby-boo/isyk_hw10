@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from './ErrorButton.module.css';
-import img from './error.png'
+import img from '../../assets/images/errorButton.png'
 
 const ErrorButton = () => {
     const [error, setError] = useState(false);
@@ -17,7 +17,7 @@ const ErrorButton = () => {
         <div className={style.errorInner}>
             <button className={style.errorButton} onClick={handleError}>
                 Create Error!
-                <img src={img} alt='error image' />
+                <img src={img} alt='error' />
             </button>
         </div>
     )

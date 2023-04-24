@@ -8,11 +8,12 @@ import Products from '../Products/Products';
 import ProductItem from '../ProductItem/ProductItem';
 import RequiredAuth from '../RequiredAuth/RequiredAuth';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import { Fragment } from 'react';
 
 
 const App = () => {
   return (
-    <>
+    <Fragment>
       <BrowserRouter>
         <header className='header'>
           <Navigation />
@@ -31,7 +32,7 @@ const App = () => {
           </Routes>
         </div>
       </BrowserRouter>
-    </>
+    </Fragment>
   );
 }
 
